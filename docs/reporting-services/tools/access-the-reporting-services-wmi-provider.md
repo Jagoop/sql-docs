@@ -59,7 +59,7 @@ PS C:\windows\system32> Get-WmiObject –namespace <namespacename> –class <cla
  For example, to access the MSReportServer_ConfigurationSetting class on the default report server instance of the host myrshost, run the following command. The default report server instance must be installed on myrshost for this command to succeed.  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
+PS C:\windows\system32> Get-WmiObject –namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERVER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
 ```  
   
  This command syntax outputs all class property names and values. Note that all instances of the class MSReportServer_ConfigurationSetting is returned, even though you are accessing the class in the namespace of the default report server instance (RS_MSSQLSERVER). For example, if myrshost is installed with the default report server instance and a named report server instance called SHAREPOINT, this command will return two WMI objects and output the property names and values for both report server instances.  
